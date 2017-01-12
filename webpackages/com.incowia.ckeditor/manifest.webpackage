@@ -1,0 +1,52 @@
+{
+  "name": "ckeditor",
+  "groupId": "com.incowia",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "9.1.1",
+  "docType": "webpackage",
+  "author": {
+    "name": "Edwin Gamboa",
+    "email": "edwingamboa355@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "app",
+        "description": "This is a simple pre-generated app.",
+        "runnables": [
+          {
+            "name": "app",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
+      },
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [],
+    "compoundComponents": [],
+    "utilities": [
+      {
+        "artifactId": "ckeditor-util",
+        "description": "Utility to provide the ckeditor v 4.6.1",
+        "resources": [
+          "html-import.html"
+        ],
+        "dependencies": []
+      }
+    ]
+  }
+}
