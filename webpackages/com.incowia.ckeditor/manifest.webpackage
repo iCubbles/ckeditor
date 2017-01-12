@@ -1,7 +1,7 @@
 {
   "name": "ckeditor",
   "groupId": "com.incowia",
-  "version": "0.1.0-SNAPSHOT",
+  "version": "1.0.0-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -36,14 +36,87 @@
         ]
       }
     ],
-    "elementaryComponents": [],
+    "elementaryComponents": [
+      {
+        "artifactId": "cubx-ckeditor",
+        "description": "Component that allow the use of ckeditor within the Cubbles platform",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "cubx-ckeditor.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.1.0",
+            "artifactId": "cubxpolymer"
+          },
+          {
+            "webpackageId": "jquery-2.1.4@1.2.0",
+            "artifactId": "jquery"
+          },
+          {
+            "artifactId": "ckeditor-util"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "config",
+            "type": "object",
+            "description": "Config object for the ckeditor (see: http://docs.ckeditor.com/#!/api/CKEDITOR.config)",
+            "direction": [
+              "input"
+            ],
+            "value": {
+              "toolbarGroups": [
+                { "name": "clipboard", "groups": [ "clipboard", "undo" ] },
+                { "name": "editing", "groups": [ "find", "selection", "spellchecker" ] },
+                { "name": "links" },
+                { "name": "insert" },
+                { "name": "forms" },
+                { "name": "tools" },
+                { "name": "document", "groups": [ "mode", "document", "doctools" ] },
+                { "name": "others" },
+                "/",
+                { "name": "basicstyles", "groups": [ "basicstyles", "cleanup" ] },
+                { "name": "paragraph", "groups": [ "list", "indent", "blocks", "align", "bidi" ] },
+                { "name": "styles" },
+                { "name": "colors" },
+                { "name": "about" }
+              ]
+            }
+          },
+          {
+            "slotId": "data",
+            "type": "string",
+            "description": "Editors content (raw text or html formatted text)",
+            "direction": [ "input" ]
+          },
+          {
+            "slotId": "dataChangeEvent",
+            "type": "string",
+            "description": "Data of the editor. This slot is set when the 'change' event is fired.",
+            "direction": [ "output" ]
+          }
+        ]
+      }
+    ],
     "compoundComponents": [],
     "utilities": [
       {
         "artifactId": "ckeditor-util",
         "description": "Utility to provide the ckeditor v 4.6.1",
         "resources": [
-          "html-import.html"
+          "ckeditor.js"
         ],
         "dependencies": []
       }
