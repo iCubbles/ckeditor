@@ -47,11 +47,23 @@
       }
       this.editor = CKEDITOR.replace(this.$$('textarea'), newConfig);
       this.editor.on('change', this.handleChangeEvent.bind(this));
+      this.editor.on('blur', this.handleBlurEvent.bind(this));
     },
 
+    /**
+     * Handle the event fired when the editor changes its data value
+     * @param {event} e
+     */
     handleChangeEvent: function (e) {
       this.setDataChangeEvent(e.editor.getData());
-      console.log("dataChangeEvent slot was set");
+    },
+
+    /**
+     * Handle the event fired when the editor loses the focus
+     * @param {event} e
+     */
+    handleBlurEvent: function (e) {
+      this.setDataBlurEvent(e.editor.getData());
     }
   });
 

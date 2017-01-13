@@ -106,6 +106,12 @@
             "type": "string",
             "description": "Data of the editor. This slot is set when the 'change' event is fired.",
             "direction": [ "output" ]
+          },
+          {
+            "slotId": "dataBlurEvent",
+            "type": "string",
+            "description": "Data of the editor. This slot is set when the editor loses focus",
+            "direction": [ "output" ]
           }
         ]
       }
