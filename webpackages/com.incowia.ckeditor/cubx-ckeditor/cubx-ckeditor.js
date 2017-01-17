@@ -36,7 +36,6 @@
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
     cubxReady: function () {
-      this.replaceEditor();
     },
 
     /**
@@ -46,7 +45,7 @@
       if (this.editor) {
         this.editor.destroy();
       }
-      this.replaceEditor(newConfig);
+      this.appendEditor(newConfig);
     },
 
     /**
@@ -57,11 +56,11 @@
     },
 
     /**
-     * Replaces the current editor and add events listeners
+     * Appends a new editor and add events listeners
      * @param config
      */
-    replaceEditor: function (config) {
-      this.editor = CKEDITOR.replace(this.$$('textarea'), config);
+    appendEditor: function (config) {
+      this.editor = CKEDITOR.appendTo(this.$$('#editorContainer'), config);
       this.editor.on('change', this.handleChangeEvent.bind(this));
       this.editor.on('blur', this.handleBlurEvent.bind(this));
     },
@@ -82,6 +81,4 @@
       this.setDataBlurEvent(e.editor.getData());
     }
   });
-
-
 }());
