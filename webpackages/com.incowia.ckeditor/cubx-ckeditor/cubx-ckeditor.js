@@ -50,6 +50,13 @@
     },
 
     /**
+     *  Called when slot 'config' has changed
+     */
+    modelDataChanged: function (newData) {
+      this.editor.setData(newData)
+    },
+
+    /**
      * Replaces the current editor and add events listeners
      * @param config
      */
@@ -65,7 +72,6 @@
      */
     handleChangeEvent: function (e) {
       this.setDataChangeEvent(e.editor.getData());
-      console.log('e');
     },
 
     /**
