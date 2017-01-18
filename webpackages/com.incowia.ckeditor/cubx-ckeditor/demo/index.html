@@ -8,7 +8,44 @@
 </head>
 
 <body>
-<!--  Place cubbles components there. -->
+<h1>&lt;cubx-ckeditor&gt; Demo</h1>
+<h2>Slots:</h2>
+<form>
+    <div style="width: 100%">
+        <label for="config"><h3>config (object):</h3></label>
+        <textarea id="config" style="width: inherit; height: 80px;">
+{
+  "toolbar": [
+    { "name": "document", "items": [ "Source", "-", "Save", "NewPage", "Preview", "Print", "-", "Templates" ] },
+    { "name": "clipboard", "items": [ "Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "-", "Undo", "Redo" ] },
+    { "name": "editing", "items": [ "Find", "Replace", "-", "SelectAll", "-", "Scayt" ] },
+    { "name": "forms", "items": [ "Form", "Checkbox", "Radio", "TextField", "Textarea", "Select", "Button", "ImageButton", "HiddenField" ] },
+    "/",
+    { "name": "basicstyles", "items": [ "Bold", "Italic", "Underline", "Strike", "Subscript", "Superscript", "-", "CopyFormatting", "RemoveFormat" ] },
+    { "name": "paragraph", "items": [ "NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote", "CreateDiv", "-", "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock", "-", "BidiLtr", "BidiRtl", "Language" ] },
+    { "name": "links", "items": [ "Link", "Unlink", "Anchor" ] },
+    { "name": "insert", "items": [ "Image", "Flash", "Table", "HorizontalRule", "Smiley", "SpecialChar", "PageBreak", "Iframe" ] },
+    "/",
+    { "name": "styles", "items": [ "Styles", "Format", "Font", "FontSize" ] },
+    { "name": "colors", "items": [ "TextColor", "BGColor" ] },
+    { "name": "tools", "items": [ "Maximize", "ShowBlocks" ] },
+    { "name": "about", "items": [ "About" ] }
+  ]
+}
+        </textarea>
+        <button id="btn_setConfig" disabled="disabled" type="button">Set</button>
+    </div>
+    <div style="width: 100%">
+        <label for="data"><h3>data (string):</h3></label>
+        <textarea id="data" style="width: inherit; height: 80px;">
+&lt;p&gt;This&nbsp;&lt;strong&gt;config &lt;/strong&gt;allow you to use the&nbsp;official &lt;em&gt;full package&lt;/em&gt; of &lt;strong&gt;&lt;a href="http://ckeditor.com/builder/50877b4c1fcbadd4a2c7659a7907c067"&gt;ckeditor&lt;/a&gt;&nbsp;&lt;/strong&gt;toolbar items in all its available languages.&lt;/p&gt;
+        </textarea>
+        <button id="btn_setData" disabled="disabled" type="button">Set</button>
+    </div>
+</form>
+
+<div style="width:100%;height:1px;background-color:#8f8f8f;display:inline-block;"></div>
+<h2>View:</h2>
 <cubx-ckeditor cubx-webpackage-id="this"></cubx-ckeditor>
 
 <p id="note" style="display:none">
@@ -17,10 +54,31 @@
 </p>
 
 <script>
-    document.addEventListener('cifReady', function () {
+    (function() {
+        'use strict';
+
+        var ckeditor = document.querySelector('cubx-ckeditor');
+        var btn_setConfig = document.querySelector('#btn_setConfig');
+        var btn_setData = document.querySelector('#btn_setData');
+        var config = document.querySelector('#config');
+        var data = document.querySelector('#data');
         var p = document.querySelector('#note');
-        p.style.display = 'block';
-    });
+
+        btn_setConfig.addEventListener('click', function () {
+            ckeditor.setConfig(config.value);
+            btn_setData.removeAttribute('disabled');
+            p.style.display = 'block';
+        });
+
+        btn_setData.addEventListener('click', function () {
+            ckeditor.setData(data.value);
+        });
+
+        // Wait for CIF to be ready
+        document.addEventListener('cifReady', function () {
+            btn_setConfig.removeAttribute('disabled');
+        });
+    })();
 </script>
 
 </body>

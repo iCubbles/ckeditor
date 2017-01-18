@@ -8,14 +8,25 @@
 </head>
 
 <body>
+<p>
+    Bellow a compound composed by 2 cubx-ckeditor components. Type and edit something using editor 1 and you will see it working.
+</p>
+
+<h1> Editor 1</h1>
 <cubx-ckeditor id="first" cubx-webpackage-id="this">
     <cubx-core-init style="display:none">
-        <cubx-core-slot-init slot="config">{"toolbarGroups": [{"name": "clipboard"}]}</cubx-core-slot-init>
+        <cubx-core-slot-init slot="config">{"toolbar": [{ "name": "basicstyles", "items": [ "Bold", "Italic", "Underline", "Strike", "Subscript", "Superscript", "-", "CopyFormatting", "RemoveFormat" ] }]}</cubx-core-slot-init>
     </cubx-core-init>
     <cubx-core-connections style="display:none">
-        <cubx-core-connection connection-id="dataCon" source="dataBlurEvent" destination="second:data"></cubx-core-connection>
+        <cubx-core-connection connection-id="dataCon" source="dataChangeEvent" destination="second:data"></cubx-core-connection>
     </cubx-core-connections>
 </cubx-ckeditor>
-<cubx-ckeditor id="second" cubx-webpackage-id="this"></cubx-ckeditor>
+
+<h1> Editor 2</h1>
+<cubx-ckeditor id="second" cubx-webpackage-id="this">
+    <cubx-core-init style="display:none">
+        <cubx-core-slot-init slot="config">{"toolbar": [{ "name": "basicstyles", "items": [ "Bold", "Italic", "Underline", "Strike", "Subscript", "Superscript", "-", "CopyFormatting", "RemoveFormat" ]}, { "name": "paragraph", "items": [ "NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote", "CreateDiv", "-", "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock", "-", "BidiLtr", "BidiRtl", "Language" ] }]}</cubx-core-slot-init>
+    </cubx-core-init>
+</cubx-ckeditor>
 </body>
 </html>
