@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>&lt;cubx-ckeditor&gt; demo</title>
-
     <script src="../../../cubx.core.rte@2.1.0/webcomponents-lite/webcomponents-lite.js"></script>
-
-    <!--
-        Refer to the crc-loader artifact from a Cubbles-Base.
-        Take care: All other dependencies are expected to be available within the same Base!
-
-        Want to add a 'main' -script to be executed after the dependencies have been loaded?
-        If yes, add the following attribute: data-crc-main="js/my-script.js"
-    -->
     <script src="../../../cubx.core.rte@2.1.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
-
 </head>
+
 <body>
 <!--  Place cubbles components there. -->
 <cubx-ckeditor cubx-webpackage-id="this"></cubx-ckeditor>
+
+<p id="note" style="display:none">
+    You may also want to check this <a href="severalEditors.html">demo</a> that shows a compound
+    composed by two ckeditors.
+</p>
+
+<script>
+    document.addEventListener('cifReady', function () {
+        var p = document.querySelector('#note');
+        p.style.display = 'block';
+    });
+</script>
 
 </body>
 </html>

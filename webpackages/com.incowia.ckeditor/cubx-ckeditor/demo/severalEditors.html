@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compound ckeditors</title>
+    <script src="../../../cubx.core.rte@2.1.0/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@2.1.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+</head>
+
+<body>
+<cubx-ckeditor id="first" cubx-webpackage-id="this">
+    <cubx-core-init style="display:none">
+        <cubx-core-slot-init slot="config">{"toolbarGroups": [{"name": "clipboard"}]}</cubx-core-slot-init>
+    </cubx-core-init>
+    <cubx-core-connections style="display:none">
+        <cubx-core-connection connection-id="dataCon" source="dataBlurEvent" destination="second:data"></cubx-core-connection>
+    </cubx-core-connections>
+</cubx-ckeditor>
+<cubx-ckeditor id="second" cubx-webpackage-id="this"></cubx-ckeditor>
+</body>
+</html>
