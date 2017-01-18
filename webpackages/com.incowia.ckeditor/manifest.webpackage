@@ -6,7 +6,7 @@
   "docType": "webpackage",
   "author": {
     "name": "Edwin Gamboa",
-    "email": "edwingamboa355@gmail.com"
+    "email": "ediwn.gamboa@incowia.com"
   },
   "license": "MIT",
   "keywords": [],
@@ -75,7 +75,7 @@
             ]
           },
           {
-            "slotId": "dataChangeEvent",
+            "slotId": "dataAfterChange",
             "type": "string",
             "description": "Data of the editor. This slot is set when the 'change' event is fired.",
             "direction": [
@@ -83,7 +83,7 @@
             ]
           },
           {
-            "slotId": "dataBlurEvent",
+            "slotId": "dataAfterBlur",
             "type": "string",
             "description": "Data of the editor. This slot is set when the editor loses focus",
             "direction": [

@@ -70,7 +70,7 @@
      * @param {event} e
      */
     handleChangeEvent: function (e) {
-      this.setDataChangeEvent(e.editor.getData());
+      this.setDataAfterChange(e.editor.getData());
     },
 
     /**
@@ -78,7 +78,7 @@
      * @param {event} e
      */
     handleBlurEvent: function (e) {
-      this.setDataBlurEvent(e.editor.getData());
+      this.setDataAfterBlur(e.editor.getData());
     }
   });
 }());
