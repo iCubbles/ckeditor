@@ -348,7 +348,7 @@
           {
             "slot": "config",
             "value": {
-              "config.toolbar": [
+              "toolbar": [
                 {
                   "name": "clipboard",
                   "items": [
@@ -365,11 +365,6 @@
                 {
                   "name": "editing",
                   "items": [
-                    "Find",
-                    "Replace",
-                    "-",
-                    "SelectAll",
-                    "-",
                     "Scayt"
                   ]
                 },
@@ -385,47 +380,21 @@
                   "name": "insert",
                   "items": [
                     "Image",
-                    "Flash",
                     "Table",
                     "HorizontalRule",
-                    "SpecialChar",
-                    "Smiley",
-                    "PageBreak",
-                    "Iframe"
-                  ]
-                },
-                {
-                  "name": "forms",
-                  "items": [
-                    "Form",
-                    "Checkbox",
-                    "Radio",
-                    "TextField",
-                    "Textarea",
-                    "Select",
-                    "Button",
-                    "ImageButton",
-                    "HiddenField"
+                    "SpecialChar"
                   ]
                 },
                 {
                   "name": "tools",
                   "items": [
-                    "Maximize",
-                    "ShowBlocks"
+                    "Maximize"
                   ]
                 },
                 {
                   "name": "document",
                   "items": [
-                    "Source",
-                    "-",
-                    "Save",
-                    "NewPage",
-                    "Preview",
-                    "Print",
-                    "-",
-                    "Templates"
+                    "Source"
                   ]
                 },
                 "/",
@@ -436,7 +405,6 @@
                     "Italic",
                     "Strike",
                     "-",
-                    "CopyFormatting",
                     "RemoveFormat"
                   ]
                 },
@@ -449,33 +417,14 @@
                     "Outdent",
                     "Indent",
                     "-",
-                    "Blockquote",
-                    "CreateDiv",
-                    "-",
-                    "JustifyLeft",
-                    "JustifyCenter",
-                    "JustifyRight",
-                    "JustifyBlock",
-                    "-",
-                    "BidiLtr",
-                    "BidiRtl",
-                    "Language"
+                    "Blockquote"
                   ]
                 },
                 {
                   "name": "styles",
                   "items": [
                     "Styles",
-                    "Format",
-                    "Font",
-                    "FontSize"
-                  ]
-                },
-                {
-                  "name": "colors",
-                  "items": [
-                    "TextColor",
-                    "BGColor"
+                    "Format"
                   ]
                 },
                 {
