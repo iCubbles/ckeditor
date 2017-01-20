@@ -65,7 +65,7 @@
         var p = document.querySelector('#note');
 
         btn_setConfig.addEventListener('click', function () {
-            ckeditor.setConfig(config.value);
+            ckeditor.setConfig(JSON.parse(config.value));
             btn_setData.removeAttribute('disabled');
             p.style.display = 'block';
         });
