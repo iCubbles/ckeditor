@@ -1,12 +1,12 @@
 {
   "name": "ckeditor",
-  "groupId": "com.incowia",
+  "groupId": "",
   "version": "1.0.0-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
     "name": "Edwin Gamboa",
-    "email": "ediwn.gamboa@incowia.com"
+    "email": "edwingamboa355@gmail.com"
   },
   "license": "MIT",
   "keywords": [],
