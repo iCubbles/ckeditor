@@ -19,14 +19,14 @@ The generated documentation for this webpackage and its artifacts is available [
 The html file should contain the desire component using its tag, e.g. the `<cubx-ckeditor>`, as follows:
 
 ```html
-<cubx-ckeditor cubx-webpackage-id="ckeditor@1.0.0-SNAPSHOT"></cubx-ckeditor>
+<cubx-ckeditor cubx-webpackage-id="ckeditor@1.0.0"></cubx-ckeditor>
 ```
-Note that the `webpackageId` should be provided, which in this case is: `ckeditor@1.0.0-SNAPSHOT`
+Note that the `webpackageId` should be provided, which in this case is: `ckeditor@1.0.0`
 
 Additionally, this component can be initialized using the `<cubx-core-slot-init>` tag (available from _cubx.core.rte_ version 1.9.0). For example, lets initilize the `config` slot to get the basic package of ckeditor:
 
 ```html
-<cubx-ckeditor cubx-webpackage-id="ckeditor@1.0.0-SNAPSHOT">
+<cubx-ckeditor cubx-webpackage-id="ckeditor@1.0.0">
         <!--Initilization-->
         <cubx-core-init>
                 <cubx-core-slot-init slot="config">{"toolbar": [{ "name": "basicstyles", "items": [ "Bold", "Italic", "Underline", "Strike", "Subscript", "Superscript", "-", "CopyFormatting", "RemoveFormat" ] }]}</cubx-core-slot-init>
@@ -51,16 +51,16 @@ You may also like to check [CKEditor official documentation][ckeOfDoc].
 [ckeditor]: http://ckeditor.com/
 [ckeOfDoc]: http://docs.ckeditor.com/
 [ckeDownload]: http://ckeditor.com/download
-[wpDocs]: https://cubbles.world/shared/ckeditor@1.0.0-SNAPSHOT/docs/index.html
+[wpDocs]: https://cubbles.world/shared/ckeditor@1.0.0/docs/index.html
 
-[demoCke]: https://cubbles.world/shared/ckeditor@1.0.0-SNAPSHOT/cubx-ckeditor/demo/index.html
-[docsCke]: https://cubbles.world/shared/ckeditor@1.0.0-SNAPSHOT/cubx-ckeditor/docs/index.html
+[demoCke]: https://cubbles.world/shared/ckeditor@1.0.0/cubx-ckeditor/demo/index.html
+[docsCke]: https://cubbles.world/shared/ckeditor@1.0.0/cubx-ckeditor/docs/index.html
 
-[demoCkeB]: https://cubbles.world/shared/ckeditor@1.0.0-SNAPSHOT/cubx-ckeditor-basic/demo/index.html
-[docsCkeB]: https://cubbles.world/shared/ckeditor@1.0.0-SNAPSHOT/cubx-ckeditor-basic/docs/index.html
+[demoCkeB]: https://cubbles.world/shared/ckeditor@1.0.0/cubx-ckeditor-basic/demo/index.html
+[docsCkeB]: https://cubbles.world/shared/ckeditor@1.0.0/cubx-ckeditor-basic/docs/index.html
 
-[demoCkeS]: https://cubbles.world/shared/ckeditor@1.0.0-SNAPSHOT/cubx-ckeditor-standard/demo/index.html
-[docsCkeS]: https://cubbles.world/shared/ckeditor@1.0.0-SNAPSHOT/cubx-ckeditor-standard/docs/index.html
+[demoCkeS]: https://cubbles.world/shared/ckeditor@1.0.0/cubx-ckeditor-standard/demo/index.html
+[docsCkeS]: https://cubbles.world/shared/ckeditor@1.0.0/cubx-ckeditor-standard/docs/index.html
 
-[demoCkeF]: https://cubbles.world/shared/ckeditor@1.0.0-SNAPSHOT/cubx-ckeditor-full/demo/index.html
-[docsCkeF]: https://cubbles.world/shared/ckeditor@1.0.0-SNAPSHOT/cubx-ckeditor-full/docs/index.html
+[demoCkeF]: https://cubbles.world/shared/ckeditor@1.0.0/cubx-ckeditor-full/demo/index.html
+[docsCkeF]: https://cubbles.world/shared/ckeditor@1.0.0/cubx-ckeditor-full/docs/index.html
