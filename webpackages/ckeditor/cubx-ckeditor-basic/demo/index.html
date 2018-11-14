@@ -20,7 +20,11 @@
 </head>
 <body>
 <!--  Place cubbles components there. -->
-<cubx-ckeditor-basic cubx-webpackage-id="this"></cubx-ckeditor-basic>
+<cubx-ckeditor-basic cubx-webpackage-id="this">
+    <cubx-core-init style="display:none">
+        <cubx-core-slot-init slot="data">"<h1>This is the Title</h1><p>And this is the <b>content</b></p>"</cubx-core-slot-init>
+    </cubx-core-init>
+</cubx-ckeditor-basic>
 
 </body>
 </html>
